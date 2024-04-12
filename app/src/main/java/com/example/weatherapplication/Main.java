@@ -75,7 +75,7 @@ public class Main {
         this.pressure = pressure;
     }
 
-    public Integer getHumidity() {
+    public Integer  getHumidity() {
         return humidity;
     }
 

@@ -40,5 +40,13 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson:2.11.0")
     implementation ("com.squareup.picasso:picasso:2.8")
     implementation ("com.google.code.gson:gson:2.10.1")
+    implementation ("com.mikepenz:fastadapter:3.3.1")
+    implementation ("com.mikepenz:fastadapter-extensions:3.3.1")
+    implementation ("androidx.recyclerview:recyclerview:1.3.2")
+//    def room_version = "2.6.1"
+//    def lifecycle_version = "2.6.1"
+//    implementation "androidx.room:room-runtime:2.6.1"
+//    annotationProcessor "androidx.room:room-compiler:2.6.1"
+
 
 }
