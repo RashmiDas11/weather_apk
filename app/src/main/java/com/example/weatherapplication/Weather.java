@@ -19,7 +19,7 @@ public class Weather {
     private String description;
     @SerializedName("icon")
     @Expose
-    private String icon;
+   public String icon;
 
     public Integer getId() {
         return id;

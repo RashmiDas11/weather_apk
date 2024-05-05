@@ -20,7 +20,7 @@ public class Wind {
     @Expose
     private Double gust;
 
-    public Double getSpeed() {
+    public double getSpeed() {
         return speed;
     }
 

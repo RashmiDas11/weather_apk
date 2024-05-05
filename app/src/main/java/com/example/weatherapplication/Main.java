@@ -67,7 +67,7 @@ public class Main {
         this.tempMax = tempMax;
     }
 
-    public Integer getPressure() {
+    public int getPressure() {
         return pressure;
     }
 

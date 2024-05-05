@@ -26,6 +26,7 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
 }
 
 dependencies {
@@ -43,10 +44,5 @@ dependencies {
     implementation ("com.mikepenz:fastadapter:3.3.1")
     implementation ("com.mikepenz:fastadapter-extensions:3.3.1")
     implementation ("androidx.recyclerview:recyclerview:1.3.2")
-//    def room_version = "2.6.1"
-//    def lifecycle_version = "2.6.1"
-//    implementation "androidx.room:room-runtime:2.6.1"
-//    annotationProcessor "androidx.room:room-compiler:2.6.1"
-
 
 }

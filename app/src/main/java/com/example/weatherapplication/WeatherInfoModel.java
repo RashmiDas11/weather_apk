@@ -1,19 +1,45 @@
 package com.example.weatherapplication;
 
+import com.google.gson.Gson;
+
 public class WeatherInfoModel {
-    public WeatherInfoModel(){
 
-    }
-    static String city;
-    static double temperature;
-    static String WeatherCondition;
+
+    String city;
+    double temperature;
+    double feels_like;
+    String WeatherCondition;
     Integer humidity;
-    double maxTep;
-    double minTemp;
-    int pressure;
 
-    public static String getWeatherCondition() {
+    public double getFeels_like() {
+        return feels_like;
+    }
+
+    public void setFeels_like(double feels_like) {
+        this.feels_like = feels_like;
+    }
+
+    String icon;
+    Double wind;
+    Double maxTep;
+    Double minTemp;
+    Integer pressure;
+
+
+    public String getIcon() {
+        return icon;
+    }
+
+    public void setIcon(String icon) {
+        this.icon = icon;
+    }
+
+    public String getWeatherCondition() {
         return WeatherCondition;
+    }
+
+    public Double getTempMax() {
+        return maxTep;
     }
 
     public void setWeatherCondition(String weatherCondition) {
@@ -28,27 +54,27 @@ public class WeatherInfoModel {
         this.humidity = humidity;
     }
 
-    public double getMaxTep() {
+    public Double getMaxTep() {
         return maxTep;
     }
 
-    public void setMaxTep(double maxTep) {
+    public void setMaxTep(Double maxTep) {
         this.maxTep = maxTep;
     }
 
-    public double getMinTemp() {
+    public Double getMinTemp() {
         return minTemp;
     }
 
-    public void setMinTemp(double minTemp) {
+    public void setMinTemp(Double minTemp) {
         this.minTemp = minTemp;
     }
 
-    public int getPressure() {
+    public Integer getPressure() {
         return pressure;
     }
 
-    public void setPressure(int pressure) {
+    public void setPressure(Integer pressure) {
         this.pressure = pressure;
     }
 
@@ -56,12 +82,12 @@ public class WeatherInfoModel {
         return wind;
     }
 
-    public void setWind(double wind) {
+    public void setWind(Double wind) {
         this.wind = wind;
     }
 
-    double wind;
-    public static String getCity() {
+
+    public String getCity() {
         return city;
     }
 
@@ -69,11 +95,44 @@ public class WeatherInfoModel {
         this.city = city;
     }
 
-    public static Double getTemperature() {
+    public double getTemperature() {
         return temperature;
     }
 
     public void setTemperature(double temperature) {
         this.temperature = temperature;
     }
+
+    public static WeatherInfoModel fromJson(String json) {
+        Gson gson = new Gson();
+        return gson.fromJson(json, WeatherInfoModel.class);
+    }
+    // Method to serialize WeatherInfoModel object into JSON
+    public String toJson() {
+        Gson gson = new Gson();
+        return gson.toJson(this);
+    }
+
+//    public String toStringitem() {
+//        return city + "," + temperature + "," + WeatherCondition + "," +
+//                humidity + "," + maxTep + "," + minTemp + "," +
+//                pressure + "," + wind + "," + icon;
+//    }
+
+//    // Implement fromString() method
+//    public static WeatherInfoModel fromString(String data) {
+//        String[] parts = data.split(",");
+//        WeatherInfoModel model = new WeatherInfoModel();
+//        model.city = parts[0];
+//        model.temperature = Double.parseDouble(parts[1]);
+//        model.WeatherCondition = parts[2];
+//        model.humidity = Integer.valueOf(parts[3]);
+//        model.maxTep = Double.valueOf(parts[4]);
+//        model.minTemp = Double.valueOf(parts[5]);
+//        model.pressure = Integer.valueOf(parts[6]);
+//        model.wind = Double.valueOf(parts[7]);
+//        model.icon = parts[8];
+//        return model;
+//    }
+
 }

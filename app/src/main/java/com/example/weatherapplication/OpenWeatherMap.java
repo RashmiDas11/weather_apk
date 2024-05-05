@@ -9,7 +9,8 @@ import com.google.gson.annotations.SerializedName;
 import javax.annotation.processing.Generated;
 
 @Generated("jsonschema2pojo")
-public class OpenWeatherMap {
+public class OpenWeatherMap {//ok aage ka task kijiye
+    //ok sir to do list me work kar rahio hu
 
     @SerializedName("coord")
     @Expose
