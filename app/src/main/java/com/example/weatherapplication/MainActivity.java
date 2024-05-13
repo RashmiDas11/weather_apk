@@ -39,7 +39,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
-
+//initializing
     RecyclerView recyclerView;
     FastItemAdapter<AbstractItem> fastItemAdapter;
     LocationManager locationManager;
