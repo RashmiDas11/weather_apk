@@ -86,7 +86,7 @@ public class WeatherInfoModel {
         this.wind = wind;
     }
 
-
+//get city
     public String getCity() {
         return city;
     }
