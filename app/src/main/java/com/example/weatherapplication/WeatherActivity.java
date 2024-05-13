@@ -46,6 +46,7 @@ public class WeatherActivity extends AppCompatActivity {
         editTextWeather = findViewById(R.id.EditTextCityName);
         buttonSearch = findViewById(R.id.search);
         rain3=findViewById(R.id.rain3);
+        //search
         buttonSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
