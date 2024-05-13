@@ -6,9 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetrofitWeather  {//write all codes again
 
     private static Retrofit retrofit;
-    //search in google
-    //making it singleton
-    //sir ye ho gya
+  //singleton because here object is created only once
     public static Retrofit getRetrofitInstance(){
         if(retrofit == null){
             retrofit = new Retrofit.Builder()

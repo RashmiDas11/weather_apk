@@ -56,7 +56,9 @@ public class WeatherActivity extends AppCompatActivity {
         });
 
     }
-    //method to get weather data by city name
+    //method to get weather data by city name getting data using retrofit call
+
+
     public void getWeatherData(String name){
         if (isNetworkAvailable()) {
             WeatherAPI weatherAPI = RetrofitWeather.getRetrofitInstance().create(WeatherAPI.class);
@@ -80,14 +82,7 @@ public class WeatherActivity extends AppCompatActivity {
                         String iconCodeSearch = response.body().getWeather().get(0).getIcon();
                         Picasso.get().load("  https://openweathermap.org/img/wn/" +iconCodeSearch+ ".png")
                                 .placeholder(R.drawable.iconw2).into(imageview2);
-//                        WeatherInfoModel.setIcon(iconCode);
-//                String iconCode = null;
-//                if (response != null && response.body() != null && !response.body().getWeather().isEmpty()) {
-//                    iconCode = response.body().getWeather().get(0).getIcon();
-//                }
 
-//                Picasso.get().load(" https://openweathermap.org/img/wn/"+iconCode+"@2x.png")
-//                        .placeholder(R.drawable.weather).into(imageview2);
                     } else {
                         Toast.makeText(WeatherActivity.this, "city not found please try again", Toast.LENGTH_LONG).show();
                     }

@@ -113,26 +113,6 @@ public class WeatherInfoModel {
         return gson.toJson(this);
     }
 
-//    public String toStringitem() {
-//        return city + "," + temperature + "," + WeatherCondition + "," +
-//                humidity + "," + maxTep + "," + minTemp + "," +
-//                pressure + "," + wind + "," + icon;
-//    }
 
-//    // Implement fromString() method
-//    public static WeatherInfoModel fromString(String data) {
-//        String[] parts = data.split(",");
-//        WeatherInfoModel model = new WeatherInfoModel();
-//        model.city = parts[0];
-//        model.temperature = Double.parseDouble(parts[1]);
-//        model.WeatherCondition = parts[2];
-//        model.humidity = Integer.valueOf(parts[3]);
-//        model.maxTep = Double.valueOf(parts[4]);
-//        model.minTemp = Double.valueOf(parts[5]);
-//        model.pressure = Integer.valueOf(parts[6]);
-//        model.wind = Double.valueOf(parts[7]);
-//        model.icon = parts[8];
-//        return model;
-//    }
 
 }

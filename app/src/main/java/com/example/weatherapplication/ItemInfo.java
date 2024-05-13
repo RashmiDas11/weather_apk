@@ -82,77 +82,7 @@ public class ItemInfo extends AppCompatActivity {
 //                    .setText(String.valueOf(weatherInfoModel.getFeels_like()));
     }
 }
-//        windItem.setText(":"+WeatherInfoModel.getMain.);
-
 //
-//import static com.example.weatherapplication.MainActivity.LOCATION_INTENT_KEY;
-//
-//import android.annotation.SuppressLint;
-//import android.os.Bundle;
-//import android.view.View;
-//import android.widget.Button;
-//import android.widget.EditText;
-//import android.widget.ImageView;
-//import android.widget.TextView;
-//import android.widget.Toast;
-//
-//import androidx.annotation.NonNull;
-//import androidx.appcompat.app.AppCompatActivity;
-//
-//import com.squareup.picasso.Picasso;
-//
-//import retrofit2.Call;
-//import retrofit2.Callback;
-//import retrofit2.Response;
-//
-//public class ItemInfo extends AppCompatActivity {
-//
-//    private TextView cityitem, temperatureItem, weatherConditionItem, humidityItem, maxTempItem, minTempItem, pressureItem, windItem;
-//    private ImageView imageviewItem;
-//
-//
-//    @SuppressLint("MissingInflatedId")
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.item_info);
-//
-//
-//        cityitem = findViewById(R.id.textViewitem);
-//        temperatureItem = findViewById(R.id.textViewTempItem);
-//        weatherConditionItem = findViewById(R.id.textViewWeathConditionitem);
-//        humidityItem = findViewById(R.id.humidityitem);
-//        maxTempItem = findViewById(R.id.maxTempitem);
-//        minTempItem = findViewById(R.id.minTempitem);
-//        pressureItem = findViewById(R.id.pressureitem);
-//        windItem = findViewById(R.id.winditem);
-//        imageviewItem = findViewById(R.id.imageviewitem);
-//
-//        LocationInfo locationInfo = getIntent().getParcelableExtra(LOCATION_INTENT_KEY);
-//
-//        if (locationInfo != null) {
-//            MainActivity.getWeatherData(locationInfo, new WeatherInfoCallBack() {
-//                @Override
-//                public void onWeatherInfoAvailable(WeatherInfoModel weatherInfoModel) {
-//                   cityitem.setText(weatherInfoModel.city);
-//               temperatureItem.setText( +weatherInfoModel.getTemperature() + " °C");
-//                    weatherConditionItem.setText(weatherInfoModel.getWeatherCondition());
-//                    humidityItem.setText(":  "+ weatherInfoModel.getHumidity() + " %");
-//                    maxTempItem.setText(":  "+weatherInfoModel.getMaxTep() + "°C");
-//                    minTempItem.setText(":  "+weatherInfoModel.getMinTemp() + " °C");
-//                    pressureItem.setText(":  "+weatherInfoModel.getPressure() + " Pa");
-//                    windItem.setText(":  "+String.valueOf(weatherInfoModel.getWind() +"Km/Hr"));
-//                    String  iconcodeItem = weatherInfoModel.getIcon();
-//                    Picasso.get().load("https://openweathermap.org/img/wn/" + iconcodeItem + ".png")
-//                            .placeholder(R.drawable.iconw2).into(imageviewItem);
-////                    feels_likeItem.setText(String.valueOf(weatherInfoModel.getFeels_like()));
-//                }
-//            });
-//        }
-//
-//
-//    }
-//}
 //
 //
 //

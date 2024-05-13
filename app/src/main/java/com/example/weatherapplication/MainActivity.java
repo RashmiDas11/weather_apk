@@ -236,7 +236,7 @@ public class MainActivity extends AppCompatActivity {
 
         fastItemAdapter.withOnClickListener((v, adapter, item, position) -> {
 //           if (isNetworkAvailable()) {
-            if (item instanceof WeatherItemModel) {
+            if (item instanceof WeatherItemModel)  {
 //                Toast.makeText(MainActivity.this, "Clicked item at position: " + position, Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(MainActivity.this, ItemInfo.class);
                 intent.putExtra(LOCATION_INTENT_KEY, ((WeatherItemModel) item).locationInfo);
@@ -283,7 +283,7 @@ public class MainActivity extends AppCompatActivity {
 
             locationInfos.add(locationInfo);
         }
-//
+
         res.close();
         return locationInfos;
 
@@ -291,7 +291,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public static void getWeatherData(LocationInfo locationInfo, WeatherInfoCallBack weatherInfoCallBack) {
-
+//getting wether data fron api and calling it throw retrofit instance method
         try {
             WeatherAPI weatherAPI = RetrofitWeather.getRetrofitInstance().create(WeatherAPI.class);
             Call<OpenWeatherMap> call = weatherAPI.getWeatherWithLocation(locationInfo.latitude, locationInfo.longitude);
@@ -315,8 +315,7 @@ public class MainActivity extends AppCompatActivity {
                         WeatherInfoModel.setFeels_like(weatherMap.getMain().getFeelsLike());
                         String iconCode = weatherMap.getWeather().get(0).getIcon();
                         WeatherInfoModel.setIcon(iconCode);
-//                       Picasso.get().load("  https://openweathermap.org/img/wn/" + iconCode + " @2x.png")
-//                               .placeholder(R.drawable.iconw2).into(imageview);
+//
                         weatherInfoCallBack.onWeatherInfoAvailable(WeatherInfoModel);
 
                     }
@@ -325,7 +324,7 @@ public class MainActivity extends AppCompatActivity {
 
                 @Override
                 public void onFailure(@NonNull Call<OpenWeatherMap> call, @NonNull Throwable throwable) {
-//                Toast.makeText(context, "failed to load", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "failed to load", Toast.LENGTH_SHORT).show();
 
                 }
 
@@ -391,25 +390,16 @@ public class MainActivity extends AppCompatActivity {
             shareIntent.putExtra(Intent.EXTRA_TEXT, location);
             startActivity(Intent.createChooser(shareIntent, "Share Location"));
         } else {
-//             Handle the case where current location information is not available
+
             Toast.makeText(this, "Weather not loaded yet ", Toast.LENGTH_SHORT).show();
         }
     }
 
     private void refreshWeatherInfo() {
-//            if (currentLocationInfo != null) {
-//                getWeatherData(currentLocationInfo, weatherInfoModel -> {
-//                    weatherInfoModel = weatherInfoModel;
 //
-//                    Toast.makeText(this, "Weather refreshed", Toast.LENGTH_SHORT).show();
-//                });
-//            } else {
-//                // Handle the case where the current location information is not available
-//                Toast.makeText(this, "Current location information not available", Toast.LENGTH_SHORT).show();
-//            }
         if (isNetworkAvailable()) {
             if (currentLocationInfo != null) {
-                // Call the method to get weather data for the current location
+              // method to get weather data for the current location
                 getWeatherData(currentLocationInfo, new WeatherInfoCallBack() {
                     @Override
                     public void onWeatherInfoAvailable(WeatherInfoModel newWeatherInfoModel) {
@@ -420,7 +410,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
             } else {
-                //  current location information is not available
+
                 Toast.makeText(this, "Current location information not available", Toast.LENGTH_SHORT).show();
             }
         } else {
